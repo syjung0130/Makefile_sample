@@ -9,8 +9,8 @@ hello~
 
 
 ### -c옵션(컴파일)
- - -c 옵션을 사용해서 object파일을 만든다
- - object파일을 만들고 -o 옵션을 사용해서 실행파일(output)을 만들도록 할 수 있다
+ - -c 옵션을 사용해서 object파일을 만든다  
+ - object파일을 만들고 -o 옵션을 사용해서 실행파일(output)을 만들도록 할 수 있다  
 ~~~sh
 /workdir/build# gcc -c hello.c main.c
 /workdir/build# ll
@@ -26,19 +26,19 @@ drwxr-xr-x 3 root root 4096 Jan 31 05:19 ../
 /workdir/build# gcc -o main hello.o main.o 
 /workdir/build# ./main
 hello~
-~~~
-
-
+~~~  
+  
+  
 ### gcc
-gcc 컴파일러의 parameter로 .o를 전달하고 있다.
-이는 gcc 가 C만 컴파일하는 것이 아니라 컴파일러를 실행하는 실행파일이기 때문에 가능하다.
-C언어는 기본적으로 아래의 과정을 거쳐야만 실행파일이 생성된다.
- - 컴파일(cc1): (.c --> .o)
- - 링크(ld). : (.o --> 실행파일)
-
-gcc 는 확장자를 보고 알아서 컴파일과 링크를 수행하도록 설계되어있다.
-즉, gcc는 컴파일러와 링크를 불러주는 대리인이다.
-
+gcc 컴파일러의 parameter로 .o를 전달하고 있다.  
+이는 gcc 가 C만 컴파일하는 것이 아니라 컴파일러를 실행하는 실행파일이기 때문에 가능하다.  
+C언어는 기본적으로 아래의 과정을 거쳐야만 실행파일이 생성된다.  
+ - 컴파일(cc1): (.c --> .o)  
+ - 링크(ld). : (.o --> 실행파일)  
+  
+gcc 는 확장자를 보고 알아서 컴파일과 링크를 수행하도록 설계되어있다.  
+즉, gcc는 컴파일러와 링크를 불러주는 대리인이다.  
+  
 ### -I 옵션(헤더파일 include)
  - 헤더파일이 위치한 곳을 지정하는 옵션  
  - <>를 쓴 경우, /usr/include를 기준으 파일을 찾아 include한다.  
@@ -70,9 +70,9 @@ a 는 archive의 약자로, "모음"이라는 뜻이다.
 ~~~sh
 /workdir/build# ar t libc.a
 ~~~  
-
+  
 ### static library 사용 예제
-예제코드: hey.h, hey.c main_hey.c
+예제코드: hey.h, hey.c main_hey.c  
 ~~~sh
 /workdir/build# gcc -c hey.c -I./
 /workdir/build# ar r libhey.a hey.o 
@@ -85,4 +85,5 @@ hey.o
 root@f6df67fb98e7:/workdir/build# ./main_hey 
 hey~
 root@f6df67fb98e7:/workdir/build# 
-~~~
+~~~  
+  
