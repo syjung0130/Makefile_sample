@@ -2,7 +2,7 @@
 Makefile sample
 
 ## build docker image
-mkdir build
+mkdir build  
 docker build -t linux-makefile:imx-1 .  
   
 ## run docker container
