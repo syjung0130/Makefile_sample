@@ -71,7 +71,7 @@ a 는 archive의 약자로, "모음"이라는 뜻이다.
 /workdir/build# ar t libc.a
 ~~~  
   
-### static library 사용 예제
+### static library 생성 예제
 예제코드: hey.h, hey.c main_hey.c  
 ~~~sh
 /workdir/build# gcc -c hey.c -I./
