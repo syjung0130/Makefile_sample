@@ -1,8 +1,11 @@
-# GCC  
+# gcc  
 about gcc, gcc command options  
 
-# Makefile_sample
-Makefile sample
+# makefile basic  
+make basic(suffix, gnu make)  
+
+# makefile practice
+practical usage sample(library, linking, etc...)
 
 ## build docker image
 mkdir build  
